@@ -37,6 +37,7 @@ module.exports = function (grunt) {
 		emberTemplates: {
 			main: {
 				options: {
+					templateBasePath: "src/hbs/"
 				},
 				files: {
 					'src/js/templates.js': 'src/hbs/**/*.hbs'
@@ -45,7 +46,13 @@ module.exports = function (grunt) {
 		},
 
 		jshint: {
-			all: ['Gruntfile.js', 'src/js/**/*.js']
+			files: ['Gruntfile.js', 'src/js/**/*.js'],
+			options: {
+				ignores: [
+					'src/js/vendor/**/*',
+					'src/js/templates.js'
+				]
+			}
 		},
 
 		watch: {
