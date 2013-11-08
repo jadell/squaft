@@ -4,10 +4,10 @@ module.exports = function (grunt) {
 
 		neuter: {
 			options: {
-				basePath: 'src/js/',
-				includeSourceMap: true
+				// includeSourceMap: true,
+				basePath: 'src/js/'
 			},
-			'public/js/squaft.js': 'src/js/**/*.js'
+			'public/js/squaft.js': 'src/js/app.js'
 		},
 
 		copy: {
