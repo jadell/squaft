@@ -4,7 +4,7 @@ module.exports = function (grunt) {
 
 		neuter: {
 			options: {
-				// includeSourceMap: true,
+				includeSourceMap: true,
 				basePath: 'src/js/'
 			},
 			'public/js/squaft.js': 'src/js/app.js'
@@ -56,6 +56,9 @@ module.exports = function (grunt) {
 		},
 
 		watch: {
+			options: {
+				livereload: true
+			},
 			scripts: {
 				files: ['src/js/**/*.js'],
 				tasks: ['jshint', 'neuter', 'copy:scripts'],

@@ -4,7 +4,7 @@
   "author": "Josh Adell <josh.adell@gmail.com> (http://joshadell.com)",
   "devDependencies": {
     "grunt": "~0.4.1",
-    "grunt-neuter": "~0.6.0",
+    "grunt-neuter": "https://github.com/jadell/grunt-neuter/tarball/combined",
     "grunt-contrib-copy": "~0.4.1",
     "grunt-contrib-jshint": "~0.7.1",
     "grunt-contrib-watch": "~0.5.3",
