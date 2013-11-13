@@ -14,3 +14,6 @@ App = Ember.Application.create({
 	rootElement: '#squaft',
 	LOG_TRANSITIONS: true
 });
+
+// Application libraries
+require('router');
