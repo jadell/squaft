@@ -1,5 +1,6 @@
 require('controllers/boxes');
 require('views/boxes');
+require('models/box');
 
 App.IndexRoute = Ember.Route.extend({
 

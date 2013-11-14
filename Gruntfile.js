@@ -48,6 +48,7 @@ module.exports = function (grunt) {
 		jshint: {
 			files: ['Gruntfile.js', 'src/js/**/*.js'],
 			options: {
+				debug: true,
 				ignores: [
 					'src/js/vendor/**/*',
 					'src/js/templates.js'
