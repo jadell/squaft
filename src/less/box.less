@@ -1,0 +1,53 @@
+.boxes {
+
+	.list-group {
+		min-height: 250px;
+		max-height: 300px;
+		overflow-y: auto;
+		overflow-x: hidden;
+	}
+
+	.list-group-item {
+		.text-center;
+
+		.box-description {
+			font-size: 10px;
+		}
+	}
+}
+
+.box {
+
+	&.box-mini {
+		display: inline-block;
+		padding: 2px;
+		margin: 0;
+		border: 1px solid green;
+		border-radius: @border-radius-base;
+
+		.box-row {
+			padding: 0;
+			margin: 0;
+			clear: both;
+
+			~ .box-row {
+				padding-top: 2px;
+			}
+
+			.box-square {
+				float: left;
+				background: @mini-box-bg;
+				width: 15px;
+				height: 15px;
+				padding: 0;
+				margin: 0;
+				border-radius: @border-radius-base - 2;
+				#gradient > .horizontal(@mini-box-bg-start, @mini-box-bg-end);
+
+				~ .box-square {
+					margin-left: 2px;
+				}
+			}
+		}
+	}
+}
