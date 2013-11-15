@@ -1,5 +1,6 @@
 require('views/application');
 require('routes/boxes');
+require('routes/boxes/new');
 require('routes/box');
 
 App.Router = Ember.Router.extend({});
