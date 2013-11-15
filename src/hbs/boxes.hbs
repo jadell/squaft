@@ -1,18 +1,38 @@
-<div class="panel-heading">
-	Boxes
-</div>
+<section class="sidebar">
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			Boxes
+		</div>
 
-<div class="panel-body">
-	<ul class="list-group">
-		{{#each itemController="box"}}
-			<li class="list-group-item">
-				{{partial "box-mini"}}
-				<div class="box-description">{{description}}</div>
-			</li>
-		{{/each}}
-	</ul>
+		<div class="panel-body">
+			<ul class="list-group">
+				{{#each itemController="box"}}
+					{{#link-to "box" this.content tagName="li" class="list-group-item"}}
+						{{partial "box-mini"}}
+						<div class="box-description">{{description}}</div>
+					{{/link-to}}
+				{{/each}}
+			</ul>
 
-	<button class="btn btn-primary col-md-12">
-		Create a Box
-	</button>
-</div>
+			<button class="btn btn-primary col-md-12">
+				Create a Box
+			</button>
+		</div>
+	</div>
+
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			Plants
+		</div>
+
+		<div class="panel-body">
+		</div>
+	</div>
+</section>
+
+<section class="main">
+	{{outlet}}
+</section>
+
+
+
