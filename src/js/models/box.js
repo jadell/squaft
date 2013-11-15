@@ -19,19 +19,4 @@ App.Box.FIXTURES = [{
 	description: "Box 3",
 	height: 2,
 	width: 4
-},{
-	id: 4,
-	description: "Box 4",
-	height: 2,
-	width: 4
-},{
-	id: 5,
-	description: "Box 5",
-	height: 2,
-	width: 4
-},{
-	id: 6,
-	description: "Box 6",
-	height: 2,
-	width: 4
 }];

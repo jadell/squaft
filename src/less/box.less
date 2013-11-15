@@ -20,35 +20,53 @@
 }
 
 .box {
+	border: @box-border;
+	border-radius: @border-radius-base;
+	display: inline-block;
+	padding: @box-spacing;
+	margin: 0;
+
+	.box-row {
+		clear: both;
+
+		~ .box-row {
+			padding-top: @box-spacing;
+		}
+
+		.box-square {
+			float: left;
+			border: @box-border;
+			width: 90px;
+			height: 90px;
+			padding: 0;
+			margin: 0;
+			border-radius: @border-radius-base - 2;
+
+			~ .box-square {
+				margin-left: @box-spacing;
+			}
+		}
+	}
 
 	&.box-mini {
-		display: inline-block;
-		padding: 2px;
-		margin: 0;
-		border: 1px solid green;
-		border-radius: @border-radius-base;
+		padding: @box-spacing-mini;
 
 		.box-row {
 			padding: 0;
 			margin: 0;
-			clear: both;
 
 			~ .box-row {
-				padding-top: 2px;
+				padding-top: @box-spacing-mini;
 			}
 
 			.box-square {
-				float: left;
 				background: @mini-box-bg;
 				width: 15px;
 				height: 15px;
-				padding: 0;
-				margin: 0;
-				border-radius: @border-radius-base - 2;
 				#gradient > .horizontal(@mini-box-bg-start, @mini-box-bg-end);
 
 				~ .box-square {
-					margin-left: 2px;
+					margin-left: @box-spacing-mini;
 				}
 			}
 		}
