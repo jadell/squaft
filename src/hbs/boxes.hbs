@@ -2,6 +2,9 @@
 	<div class="panel panel-default">
 		<div class="panel-heading">
 			Boxes
+			{{#link-to "boxes.new" tagName="button" class="btn btn-sm btn-default pull-right"}}
+				<span class="glyphicon glyphicon-plus"></span>
+			{{/link-to}}
 		</div>
 
 		<div class="panel-body">
@@ -13,10 +16,6 @@
 					{{/link-to}}
 				{{/each}}
 			</ul>
-
-			{{#link-to "boxes.new" tagName="button" class="btn btn-primary col-md-12"}}
-				Create a Box
-			{{/link-to}}
 		</div>
 	</div>
 
@@ -26,6 +25,14 @@
 		</div>
 
 		<div class="panel-body">
+			<ul class="list-group">
+				{{#each plants}}
+					<li class="list-group-item">
+						<img {{bind-attr src=icon.small}} />
+						<div class="plant-name">{{name}}</div>
+					</li>
+				{{/each}}
+			</ul>
 		</div>
 	</div>
 </section>

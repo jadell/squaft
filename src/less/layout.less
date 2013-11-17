@@ -12,11 +12,42 @@
 }
 
 body {
+	position: relative;
 	background: #fefefe;
+
+	> .container {
+		position: absolute;
+		left: 0;
+		top: 0;
+		bottom: 0;
+		right: 0;
+		width: 98%;
+		padding: 0;
+		margin-left: 10px;
+		margin-right: 10px;
+	}
 }
 
 .sidebar {
 	.make-md-column(3);
+
+	.list-group {
+		min-height: 1px;
+		max-height: 275px;
+		overflow-y: auto;
+		overflow-x: hidden;
+	}
+
+	.list-group-item {
+		.text-center;
+	}
+
+	.panel-heading {
+		.btn {
+			position: relative;
+			top: -2px;
+		}
+	}
 }
 
 .main {
