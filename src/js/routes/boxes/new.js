@@ -1,4 +1,5 @@
 require('models/box');
+require('controllers/boxes/new');
 
 App.BoxesNewRoute = Ember.Route.extend({
 
