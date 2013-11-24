@@ -9,7 +9,7 @@ App.BoxesNewController = Ember.ObjectController.extend({
 
 		cancelBox: function () {
 			this.get('store').deleteRecord(this.get('content'));
-			this.transitionToRoute('boxes');
+			this.transitionToRoute('');
 		}
 	}
 

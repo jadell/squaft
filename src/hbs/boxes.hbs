@@ -1,45 +1,19 @@
-<section class="sidebar">
-	<div class="panel panel-default">
-		<div class="panel-heading">
-			Boxes
-			{{#link-to "boxes.new" tagName="button" class="btn btn-sm btn-default pull-right"}}
-				<span class="glyphicon glyphicon-plus"></span>
-			{{/link-to}}
-		</div>
-
-		<div class="panel-body">
-			<ul class="list-group">
-				{{#each itemController="box"}}
-					{{#link-to "box" this.content tagName="li" class="list-group-item"}}
-						{{partial "box-mini"}}
-						<div class="box-description">{{description}}</div>
-					{{/link-to}}
-				{{/each}}
-			</ul>
-		</div>
+<div class="panel panel-default">
+	<div class="panel-heading">
+		Boxes
+		{{#link-to "boxes.new" tagName="button" class="btn btn-sm btn-default pull-right"}}
+			<span class="glyphicon glyphicon-plus"></span>
+		{{/link-to}}
 	</div>
 
-	<div class="panel panel-default">
-		<div class="panel-heading">
-			Plants
-		</div>
-
-		<div class="panel-body">
-			<ul class="list-group">
-				{{#each plants}}
-					<li class="list-group-item">
-						<img {{bind-attr src=icon.small}} />
-						<div class="plant-name">{{name}}</div>
-					</li>
-				{{/each}}
-			</ul>
-		</div>
+	<div class="panel-body">
+		<ul class="list-group">
+			{{#each}}
+				{{#link-to "box" this.content tagName="li" class="list-group-item"}}
+					{{partial "box-mini"}}
+					<div class="box-description">{{description}}</div>
+				{{/link-to}}
+			{{/each}}
+		</ul>
 	</div>
-</section>
-
-<section class="main">
-	{{outlet}}
-</section>
-
-
-
+</div>

@@ -12,7 +12,7 @@ App.BoxController = Ember.ObjectController.extend({
 			}
 
 			this.get('store').deleteRecord(this.get('content'));
-			this.transitionToRoute('boxes');
+			this.transitionToRoute('');
 		}
 	}
 
