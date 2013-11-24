@@ -5,6 +5,7 @@
 // 3rd party libraries
 require('vendor/underscore-1.5.2');
 require('vendor/jquery-1.10.2');
+require('vendor/jquery-ui-1.10.3.custom.js');
 require('vendor/handlebars.runtime-v1.1.2');
 require('vendor/ember-v1.1.2');
 require('vendor/ember-data-1.0.0');

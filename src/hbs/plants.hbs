@@ -6,10 +6,10 @@
 	<div class="panel-body">
 		<ul class="list-group">
 			{{#each}}
-				<li class="list-group-item">
+				{{#view "App.PlantView" class="plant list-group-item" tagName="li"}}
 					<img {{bind-attr src=icon.small}} />
 					<div class="plant-name">{{name}}</div>
-				</li>
+				{{/view}}
 			{{/each}}
 		</ul>
 	</div>
