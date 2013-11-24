@@ -1,10 +1,7 @@
-.boxes {
-
-	.sidebar {
-		.list-group-item {
-			.box-description {
-				font-size: 10px;
-			}
+.sidebar {
+	.list-group-item {
+		.box-description {
+			font-size: 10px;
 		}
 	}
 }
@@ -51,8 +48,8 @@
 
 			.box-square {
 				background: @mini-box-bg;
-				width: 15px;
-				height: 15px;
+				width: @mini-box-size;
+				height: @mini-box-size;
 				#gradient > .horizontal(@mini-box-bg-start, @mini-box-bg-end);
 
 				~ .box-square {

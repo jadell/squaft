@@ -29,17 +29,25 @@ body {
 }
 
 .sidebar {
-	.make-md-column(3);
+	.make-md-column(2);
 
 	.list-group {
 		min-height: 1px;
 		max-height: 275px;
 		overflow-y: auto;
 		overflow-x: hidden;
+		margin-bottom: 0;
 	}
 
 	.list-group-item {
 		.text-center;
+		margin-bottom: 0;
+		border-top: none;
+		border-left: none;
+
+		&:last-of-type {
+			border-bottom: none;
+		}
 	}
 
 	.panel-heading {
@@ -47,6 +55,10 @@ body {
 			position: relative;
 			top: -2px;
 		}
+	}
+
+	.panel-body {
+		padding: 0;
 	}
 }
 
