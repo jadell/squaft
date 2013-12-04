@@ -27,6 +27,11 @@ module.exports = function (grunt) {
 				files: [
 					{src:['src/less/**/*.less'], dest: 'public/css/'}
 				]
+			},
+			fonts: {
+				files: [
+					{expand: true, cwd: 'bower_components/bootstrap/dist/fonts/', src:'**', dest: 'public/fonts/'}
+				]
 			}
 		},
 
@@ -65,30 +70,27 @@ module.exports = function (grunt) {
 
 		watch: {
 			options: {
-				livereload: true
+				livereload: true,
+				atBegin: true
 			},
 			scripts: {
 				files: ['src/js/**/*.js'],
-				tasks: ['jshint', 'neuter', 'copy:scripts'],
-				options: {
-					atBegin: true
-				}
+				tasks: ['jshint', 'neuter', 'copy:scripts']
 			},
 
 			css: {
 				files: ['src/less/**/*.less'],
-				tasks: ['less', 'copy:css'],
-				options: {
-					atBegin: true
-				}
+				tasks: ['less', 'copy:css']
+			},
+
+			fonts: {
+				files: ['bower_components/bootstrap/dist/fonts/*'],
+				tasks: ['copy:fonts']
 			},
 
 			hbs: {
 				files: ['src/hbs/**/*.hbs'],
-				tasks: ['emberTemplates'],
-				options: {
-					atBegin: true
-				}
+				tasks: ['emberTemplates']
 			}
 		}
 
