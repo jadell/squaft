@@ -5,7 +5,14 @@ module.exports = function (grunt) {
 		neuter: {
 			options: {
 				includeSourceMap: true,
-				basePath: 'src/js/'
+				basePath: 'src/js/',
+				// Handlebars doesn't export to global scope wrapped in an IIFE, so fix that
+				process: function (src, path) {
+					if (path.match(/handlebars/)) {
+						src += "\n\nthis.Handlebars = Handlebars;";
+					}
+					return src;
+				}
 			},
 			'public/js/squaft.js': 'src/js/app.js'
 		},

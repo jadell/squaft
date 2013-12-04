@@ -1,0 +1,32 @@
+{
+  "name": "squaft",
+  "version": "0.0.0",
+  "homepage": "https://github.com/jadell/squaft",
+  "authors": [
+    "Josh Adell <josh.adell@gmail.com>"
+  ],
+  "description": "Manage a square foot garden",
+  "main": "src/js/app.js",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "underscore": "~1.5.2",
+    "jquery": "~2.0.3",
+    "jquery-ui": "~1.10.3",
+    "handlebars": "~1.1.2",
+    "bootstrap": "~3.0.2",
+    "ember": "~1.2.0",
+    "ember-data": "1.0.0-beta.3"
+  },
+  "resolutions": {
+    "handlebars": "~1.1.2",
+    "ember": "~1.2.0"
+  }
+}

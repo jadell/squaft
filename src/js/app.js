@@ -3,13 +3,13 @@
  */
 
 // 3rd party libraries
-require('vendor/underscore-1.5.2');
-require('vendor/jquery-1.10.2');
-require('vendor/jquery-ui-1.10.3.custom.js');
-require('vendor/handlebars.runtime-v1.1.2');
-require('vendor/ember-v1.1.2');
-require('vendor/ember-data-1.0.0');
-require('vendor/bootstrap-v3.0.2');
+require('../../bower_components/underscore/underscore');
+require('../../bower_components/jquery/jquery');
+require('../../bower_components/jquery-ui/ui/jquery-ui');
+require('../../bower_components/handlebars/handlebars.runtime');
+require('../../bower_components/ember/ember');
+require('../../bower_components/ember-data/ember-data');
+require('../../bower_components/bootstrap/dist/js/bootstrap');
 require('templates');
 
 App = Ember.Application.create({
