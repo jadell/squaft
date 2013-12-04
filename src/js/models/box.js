@@ -4,7 +4,8 @@ App.Box = DS.Model.extend({
 	description: DS.attr(),
 	height: DS.attr('number'),
 	width: DS.attr('number'),
-	squares: DS.hasMany('square', {async:true}),
+	//squares: DS.hasMany('square', {async:true}),
+	squares: DS.attr(null, { defaultValue: Ember.A() }),
 
 	rows: function () {
 		var store = this.get('store'),
@@ -44,18 +45,18 @@ App.Box.FIXTURES = [{
 	id: 1,
 	description: "Box 1",
 	height: 2,
-	width: 8,
-	squares: [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16]
+	width: 8
+	//squares: [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16]
 },{
 	id: 2,
 	description: "Box 2",
 	height: 4,
-	width: 4,
-	squares: [17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32]
+	width: 4
+	//squares: [17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32]
 },{
 	id: 3,
 	description: "Box 3",
 	height: 2,
-	width: 4,
-	squares: [33,34,35,36,37,38,39,40]
+	width: 4
+	//squares: [33,34,35,36,37,38,39,40]
 }];
