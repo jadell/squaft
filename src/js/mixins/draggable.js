@@ -13,6 +13,8 @@ App.Draggable = Ember.Mixin.create({
 			revert: true,
 			revertDuration: 100
 		});
+
+		this.$().data("dropped-view", this);
 	}.on('didInsertElement')
 
 });

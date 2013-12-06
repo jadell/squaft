@@ -2,7 +2,9 @@
 	{{#each rows}}
 		<div class="box-row">
 			{{#each}}
-				<div class="box-square">{{x}} &times; {{y}}<br />{{id}}</div>
+				{{#view "box-square" contentBinding="this"}}
+					{{x}} &times; {{y}}<br />{{id}}
+				{{/view}}
 			{{/each}}
 		</div>
 	{{/each}}

@@ -6,7 +6,7 @@
 	<div class="panel-body">
 		<ul class="list-group">
 			{{#each}}
-				{{#view "App.PlantView" class="plant list-group-item" tagName="li"}}
+				{{#view "App.PlantView" contentBinding="this" class="plant list-group-item" tagName="li"}}
 					<img {{bind-attr src=icon.small}} />
 					<div class="plant-name">{{name}}</div>
 				{{/view}}

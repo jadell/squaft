@@ -1,3 +1,5 @@
+require("views/box-square");
+
 App.BoxController = Ember.ObjectController.extend({
 
 	actions: {
